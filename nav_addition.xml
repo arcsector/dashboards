@@ -1,0 +1,11 @@
+  <collection label="Miscellaneous">
+    <view name="index_cluster_bundle_analysis" />
+    <view name="index_cluster_bundle_push_operation" />
+    <view name="kvstore_shc_extended" />
+    <view name="shc_knowledge_bundle_analysis" />
+    <view name="support_hec_performance" />
+    <view name="support_indexing_performance" />
+    <view name="support_overview" />
+    <view name="support_shc_scheduler_analysis_detailed" />
+    <view name="support_skipped_deferred_search_analysis" />
+  </collection>
