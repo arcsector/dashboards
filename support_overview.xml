@@ -1487,7 +1487,7 @@ search="is_scheduled=1" search="disabled=0" earliest_time=-1h@m latest_time=now
       </html>
       <table>
         <search>
-          <query>| rest splunk_server_group=dmc_group_cluster_master splunk_server_group=$dmc_group$ /services/cluster/master/peers | fields label, is_searchable, status, site, bucket_count,primary_count, host_port_pair, last_heartbeat, replication_port, base_generation_id, title, bucket_count_by_index.*
+          <query>| rest splunk_server_group=dmc_group_cluster_master splunk_server_group="$dmc_group$" /services/cluster/master/peers | fields label, is_searchable, status, site, bucket_count,primary_count, host_port_pair, last_heartbeat, replication_port, base_generation_id, title, bucket_count_by_index.*
             | eval is_searchable = if(is_searchable == 1 or is_searchable == "1", "Yes", "No")
             | `dmc_time_format(last_heartbeat)`
             | sort - last_heartbeat
